@@ -7,7 +7,7 @@ async function loginAluno(event) {
     };
 
     try {
-        const response = await fetch('/login/aluno', {
+        const response = await fetch('/aluno', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(dados)
@@ -18,7 +18,7 @@ async function loginAluno(event) {
         if (response.ok) {
             alert("Login realizado!");
             // redireciona para dashboard
-            window.location.href = "/aluno/home";
+            window.location.href = "homeprof.html";
         } else {
             alert(result.message);
         }
@@ -28,3 +28,4 @@ async function loginAluno(event) {
         alert("Erro ao fazer login.");
     }
 }
+
